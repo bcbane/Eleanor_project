@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="232px" height="17px" viewBox="0 0 232 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="site-1" transform="translate(-99.000000, -497.000000)">
+            <rect id="Rectangle" fill="#FBC843" x="0" y="0" width="1600" height="740"></rect>
+            <g id="Group-2" transform="translate(99.000000, 476.000000)" fill="#414A69">
+                <path d="M209,24.3431458 L210.414214,25.7573593 L207.171146,28.9991458 L232,29 L232,31 L207.171146,30.9991458 L210.414214,34.2426407 L209,35.6568542 L203.343146,30 L209,24.3431458 Z" id="Combined-Shape" transform="translate(217.671573, 30.000000) rotate(-180.000000) translate(-217.671573, -30.000000) "></path>
+                <text id="Available-On-the-App" font-family="Helvetica" font-size="16" font-weight="normal" line-spacing="54" letter-spacing="-0.4705882">
+                    <tspan x="0" y="15">Available On the App Store</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
