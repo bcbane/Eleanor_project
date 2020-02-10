@@ -51,14 +51,14 @@ const StyledCarInfoDisplay = styled.div`
 
   .arrow-wrapper {
     position: absolute;
-    top: 20px;
-    right: 15px;
+    top: 3vh;
+    right: 2vw;
     display: flex;
     flex-direction: row;
   }
   .arrow {
-    width: 2vw;
-    padding: 10px;
+    width: 1.5vw;
+    padding: 1vw;
   }
 
   .slide-show-plx {
