@@ -44,15 +44,15 @@ const StyledSlideFive = styled.div`
 
       #info-title {
         font-family: 'Bebas Neue', Helvetica, Sans-Serif;
-        font-size: 25px;
-        margin: 10px;
+        font-size: 2vw;
+        margin: 1vh;
       }
 
       .info-desc {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        font-size: 11px;
+        font-size: 1vw;
       }
     }
   }
