@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Plx from 'react-plx';
+import backArrow from '../backArrow.svg';
+import fowardArrow from '../forwardArrow.svg';
+import mpg from '../mpg.svg';
+import hp from '../hp.svg';
+import sixty from '../sixty.svg';
+
 import {
   vehicleSlideShowPlx,
   slideTextPlx,
+  slide2TextPlx,
   vehiclePicPlx
 } from '../plxSettings'
+import VehicleImg from './VehicleImg'
 
 const StyledCarInfoDisplay = styled.div`
   position: absolute;
@@ -13,6 +21,44 @@ const StyledCarInfoDisplay = styled.div`
   bottom: 40px;
   width: 35vw;
   height: 75vh;
+
+  .title-text{
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 70px;
+    position: absolute;
+    top: -20vh;
+    right: -52vw;
+    width: 40vw;
+    color: #2C3245;
+    font-family: 'Bebas Neue';
+  }
+
+  .desc-text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45vw;
+    height: 60px;
+    font-family: 'Helvetica';
+    font-size: 11px;
+    position: absolute;
+    top: 32vh;
+    right: -57vw;
+  }
+
+  .arrow-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    display: flex;
+    flex-direction: row;
+  }
+  .arrow {
+    height: 7px;
+    padding: 10px;
+  }
 
   .slide-show-plx {
     transform-origin: 100% 50%;
@@ -35,6 +81,63 @@ const StyledCarInfoDisplay = styled.div`
     .car-text {
       display: flex;
       flex-direction: column;
+      font-family: 'Bebas Neue';
+      position: absolute;
+      left: -25vw;
+      top: 14vh;
+
+      #car-name {
+        font-size: 50px;
+      }
+
+      #car-model-year {
+        color: #56534F;
+        font-size: 13px;
+        margin-top: -10px;
+      }
+
+      #all-stats {
+        margin-top: 40px;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      #left-stats-column {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      #stats-right-column {
+        height: 110px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: -4px;
+        margin-left: 15px;
+        font-size: 25px;
+      }
+
+      #icon-holder {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .desc-car {
+        font-size: 12px;
+      }
+      #mpg-text {
+        margin-left: -25px;
+      }
+      #hp-text {
+        margin-left: -16px;
+      }
+      #sixty-text {
+        margin-left: -22px;
+      }
     }
 
     button {
@@ -42,8 +145,10 @@ const StyledCarInfoDisplay = styled.div`
     }
   }
 
-  .vehicle-pic-plx {
-    opacity: 0;
+  .sliding-cars {
+    position: absolute;
+    bottom: 0;
+    left: 35vw;
 
     #vehicle-img-1 {
       position: absolute;
@@ -100,10 +205,7 @@ function CarInfoDisplay() {
     setSelectedVehicle(indexToUse);
   };
 
-  const backArrow = '<--';
-  const nextArrow = '-->';
   const selectedVehicle = vehicles[selectedVehicleIndex];
-  const imageText = `${selectedVehicle.name} - ${selectedVehicle.model}`;
   
   return (
     
@@ -118,26 +220,93 @@ function CarInfoDisplay() {
           className='slide-text-plx'
           parallaxData={slideTextPlx}
         >
-          <button onClick={prevVehicle}>{backArrow}</button>
-          <button onClick={nextVehicle}>{nextArrow}</button>
+          <div className='arrow-wrapper'>
+            <img
+              src={backArrow}
+              className='arrow'
+              id='back-arrow'
+              alt='back-arrow'
+              onClick={prevVehicle}
+            />
+            <img
+              src={fowardArrow}
+              className='arrow'
+              id='forward-arrow'
+              alt='forward-arrow'
+              onClick={nextVehicle}
+            />
+          </div>
+
           <div className='car-text'>
-            <span>{selectedVehicle.name}</span>
-            <span>{`${selectedVehicle.year}-${selectedVehicle.model}`}</span>
-            <span><span>MPG</span>{selectedVehicle.mpg}}</span>
-            <span><span>HP</span>{selectedVehicle.hp}</span>
-            <span><span>0-60</span>{selectedVehicle.zeroToSixty}</span>
+            <span id='car-name'>{selectedVehicle.name}</span>
+            <span id='car-model-year'>{`${selectedVehicle.year}-${selectedVehicle.model}`}</span>
+          <div id='all-stats'>
+            <div id='left-stats-column'>
+              <div id='icon-holder'>
+                <img
+                  src={mpg}
+                  className='mpg-icon'
+                  alt='gas-tank'
+                />
+                <span className='desc-car' id='mpg-text'>MPG</span>
+              </div>
+              <div id='icon-holder'>
+                <img
+                  src={sixty}
+                  className='sixty-icon'
+                  alt='speedometer'
+                />
+                <span className='desc-car' id='sixty-text'>0-60</span>
+              </div>
+              <div id='icon-holder'>
+                <img
+                  src={hp}
+                  className='hp-icon'
+                  alt='graph'
+                />
+                <span className='desc-car' id='hp-text'>HP</span>
+              </div>
+            </div>
+
+            <div id='stats-right-column'>
+              <span>{selectedVehicle.mpg}</span>
+              <span>{selectedVehicle.hp}</span>
+              <span>{selectedVehicle.zeroToSixty}</span>
+            </div>
+
+          </div>
+          
           </div>
         </Plx>
-        <Plx
-          className='vehicle-pic-plx'
+        <Plx 
+          className='sliding-cars'
           parallaxData={vehiclePicPlx}
-          >
-          <img
-            className='vehicle-img'
-            id={`vehicle-img-${selectedVehicle.id}`}
-            src={selectedVehicle.img}
-            alt={imageText}
-          />
+        >
+        {
+          vehicles.map(vehicle => {
+            return (
+              <VehicleImg
+                key={vehicle.id}
+                selectedVehicle={selectedVehicle}
+                vehicle={vehicle}
+                className='vehicle-img'
+                id={`vehicle-img-${vehicle.id}`}
+              />
+            )
+          })
+        }
+        </Plx>
+        <Plx 
+          className='title-text'
+          parallaxData={slide2TextPlx}
+        >
+          <span>SELECT A VEHICLE</span>
+          <span>FROM YOUR PHONE.</span>
+          <div className='desc-text-block'>
+            <span>We have three tiers of luxary vehicles to choose from, each with all-inclusive pricing.</span>
+            <span>Once you've picked the car you want to Drive from our lineup, all we need is a driver's</span>
+            <span>license and an address to deliver the car. No gimmicks. No hidden fees.</span>
+          </div>
         </Plx>
       </StyledCarInfoDisplay>
   );

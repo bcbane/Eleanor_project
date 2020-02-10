@@ -37,6 +37,23 @@ const StyledSlideFive = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
+      .info-pic {
+        height: 14vh;
+      }
+
+      #info-title {
+        font-family: 'Bebas Neue';
+        font-size: 25px;
+        margin: 10px;
+      }
+
+      .info-desc {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 11px;
+      }
     }
   }
 `;
@@ -53,10 +70,12 @@ function SlideFive() {
           parallaxData={featureOnePlx}
         >
           <div className='feature-info'>
-            <img src={monthly} className="monthly" alt="coin" />
-            <span>SIMPLE MONTHLY PLANNING</span>
-            <span>No more restricting leases or loans. Simple</span>
-            <span>month-to-month pricing. No hidden fees!</span>
+            <img src={monthly} className="info-pic" alt="coin" />
+            <span id='info-title'>SIMPLE MONTHLY PLANNING</span>
+            <div class='info-desc'>
+              <span>No more restricting leases or loans. Simple</span>
+              <span>month-to-month pricing. No hidden fees!</span>
+            </div>
           </div>
         </Plx>
         <Plx
@@ -64,10 +83,12 @@ function SlideFive() {
           parallaxData={featureTwoPlx}
         >
           <div className='feature-info'>
-            <img src={insurance} className="insurance" alt="document" />
-            <span>VEHICLE INSURANCE INCLUDED</span>
-            <span>That's right, you're protected. All Eleanor plans</span>
-            <span>include full insurance coverage.</span>
+            <img src={insurance} className="info-pic" alt="document" />
+            <span id='info-title'>VEHICLE INSURANCE INCLUDED</span>
+            <div class='info-desc'>
+              <span>That's right, you're protected. All Eleanor plans</span>
+              <span>include full insurance coverage.</span>
+            </div>
           </div>
         </Plx>
         <Plx
@@ -75,10 +96,12 @@ function SlideFive() {
           parallaxData={featureThreePlx}
         >
           <div className='feature-info'>
-            <img src={maintenance} className="maintenance" alt="tool" />
-            <span>MAINTENANCE IS COVERED</span>
-            <span>Leave it to us. Don't worry about maintaining</span>
-            <span>your vehicle. Eleanor covers that as well.</span>
+            <img src={maintenance} className="info-pic" alt="tool" />
+            <span id='info-title'>MAINTENANCE IS COVERED</span>
+            <div class='info-desc'>
+              <span>Leave it to us. Don't worry about maintaining</span>
+              <span>your vehicle. Eleanor covers that as well.</span>
+            </div>
           </div>
         </Plx>
       </Plx>

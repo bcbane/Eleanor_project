@@ -18,19 +18,6 @@ export const slideTwoPlx = [
     properties: [
       {
         startValue: 0,
-        endValue: -18,
-        unit: 'vh',
-        property: 'translateY',
-      },
-    ],
-  },
-  {
-    start: '.sticky-trigger-1',
-    startOffset: '20vh',
-    duration: '40vh',
-    properties: [
-      {
-        startValue: -18,
         endValue: -10,
         unit: 'vh',
         property: 'translateY',
@@ -58,6 +45,26 @@ export const slideTwoPlx = [
       {
         startValue: 1,
         endValue: 0,
+        property: 'opacity',
+      },
+    ],
+  },
+];
+
+export const slide2TextPlx = [
+  {
+    start: '.sticky-trigger-1',
+    duration: '20vh',
+    properties: [
+      {
+        startValue: 10,
+        endValue: 30,
+        unit: 'vh',
+        property: 'translateY',
+      },
+      {
+        startValue: 0,
+        endValue: 1,
         property: 'opacity',
       },
     ],

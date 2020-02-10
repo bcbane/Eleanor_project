@@ -12,9 +12,6 @@
                 <rect id="Rectangle" stroke="#AD810F" fill="#F7BD28" x="10.499842" y="3" width="8" height="4" rx="1"></rect>
                 <rect id="Rectangle" fill="#AD810F" x="4.49984202" y="21" width="20" height="1" rx="0.5"></rect>
                 <path d="M3.5,5.46408464 C1.5,8.13075131 1.5,10.4640846 3.5,12.4640846 C5.5,14.4640846 6.00285855,16.642439 5.00857565,18.9991476" id="Path" stroke="#AD810F" stroke-linecap="round" stroke-linejoin="round" transform="translate(3.751909, 12.231616) rotate(12.000000) translate(-3.751909, -12.231616) "></path>
-                <text id="MPG" font-family="Helvetica" font-size="16" font-weight="normal" fill="#1B1E28">
-                    <tspan x="34.499842" y="17">MPG</tspan>
-                </text>
             </g>
         </g>
     </g>

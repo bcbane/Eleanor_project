@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from "framer-motion";
 import logo from '../logo.svg';
+import forwardArrow from '../forwardArrow.svg';
 
 const StyledSlideOne = styled.div`
   position: relative;
@@ -14,6 +15,35 @@ const StyledSlideOne = styled.div`
     top: 20px;
     z-index: 1; 
   }
+
+  .slide-one-message {
+    position: absolute;
+    z-index: 1;
+    top: 10vh;
+    left: 5vw;
+    display: flex;
+    flex-direction: column;
+
+    .call-to-action {
+      color: #FFF;
+      font-size: 80px;
+      font-family: 'Bebas Neue';
+    }
+
+    #arrow-message {
+      font-family: Sans-Serif;
+      font-size: 10px;
+      color: #414b69;
+      margin-left: 10px;
+
+      .forward-arrow {
+        height: 7px;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  
 
   .cars-group {
     position: relative;
@@ -69,6 +99,14 @@ const StyledSlideOne = styled.div`
 function SlideOne() {
   return (
     <StyledSlideOne>
+      <div className='slide-one-message'>
+        <span className='call-to-action'>DRIVE A NEW CAR</span>
+        <span className='call-to-action'>WHENEVER YOU WANT</span>
+        <div id='arrow-message'>
+          <span>Subscribe. Drive. Swap. Download Today</span>
+          <img src={forwardArrow} className='forward-arrow' alt='forward Arrow' />
+        </div>
+      </div>
       <img src={logo} className="logo" alt="Eleanor Logo" />
       <motion.div
         initial={{ x : "-100vw" }}

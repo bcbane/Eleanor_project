@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Plx from 'react-plx';
+import './App.css';
 import SlideOne from './slides/SlideOne';
 import SlideTwo from './slides/SlideTwo';
 import SlideThree from './slides/SlideThree';
@@ -20,7 +21,7 @@ const StyledApp = styled.div`
   height: 1100vh;
   
   .sticky-trigger-1 {
-    margin-top: 88vh;
+    margin-top: 98vh;
   }
 
   .sticky-trigger-2 {
