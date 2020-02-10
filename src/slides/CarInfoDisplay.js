@@ -10,8 +10,9 @@ import sixty from '../sixty.svg';
 import {
   vehicleSlideShowPlx,
   slideTextPlx,
-  slide2TextPlx,
-  vehiclePicPlx
+  slide2TitlePlx,
+  slide2DescPlx,
+  vehiclePicPlx,
 } from '../plxSettings'
 import VehicleImg from './VehicleImg'
 
@@ -26,26 +27,26 @@ const StyledCarInfoDisplay = styled.div`
     opacity: 0;
     display: flex;
     flex-direction: column;
-    font-size: 70px;
+    font-size: 6vw;
     position: absolute;
     top: -20vh;
     right: -52vw;
     width: 40vw;
     color: #2C3245;
-    font-family: 'Bebas Neue';
+    line-height: 1;
+    font-family: 'Bebas Neue', Helvetica, Sans-Serif;
   }
 
   .desc-text-block {
+    opacity: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 45vw;
-    height: 60px;
+    height: 7vh;
     font-family: 'Helvetica';
-    font-size: 11px;
+    font-size: 1vw;
     position: absolute;
-    top: 32vh;
-    right: -57vw;
   }
 
   .arrow-wrapper {
@@ -56,7 +57,7 @@ const StyledCarInfoDisplay = styled.div`
     flex-direction: row;
   }
   .arrow {
-    height: 7px;
+    width: 2vw;
     padding: 10px;
   }
 
@@ -81,43 +82,43 @@ const StyledCarInfoDisplay = styled.div`
     .car-text {
       display: flex;
       flex-direction: column;
-      font-family: 'Bebas Neue';
+      font-family: 'Bebas Neue', Helvetica, Sans-Serif;
       position: absolute;
       left: -25vw;
       top: 14vh;
 
       #car-name {
-        font-size: 50px;
+        font-size: 5vw;
       }
 
       #car-model-year {
         color: #56534F;
-        font-size: 13px;
+        font-size: 1.4vw;
         margin-top: -10px;
       }
 
       #all-stats {
-        margin-top: 40px;
-        height: 100px;
+        margin-top: 7vh;
+        height: 10vh;
         display: flex;
         flex-direction: row;
       }
 
       #left-stats-column {
-        height: 100%;
+        margin-top: 0.5vh;
+        height: 15vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
       }
 
       #stats-right-column {
-        height: 110px;
+        height: 16vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-top: -4px;
-        margin-left: 15px;
-        font-size: 25px;
+        margin-left: 2vw;
+        font-size: 2.4vw;
       }
 
       #icon-holder {
@@ -126,17 +127,21 @@ const StyledCarInfoDisplay = styled.div`
         align-items: center;
       }
 
+      .car-icon {
+        height: 3vh;
+      }
+
       .desc-car {
-        font-size: 12px;
+        font-size: 1.6vw;
       }
       #mpg-text {
-        margin-left: -25px;
+        margin-left: -1.6vw;
       }
       #hp-text {
-        margin-left: -16px;
+        margin-left: -1.4vw;
       }
       #sixty-text {
-        margin-left: -22px;
+        margin-left: -1.5vw;
       }
     }
 
@@ -152,18 +157,18 @@ const StyledCarInfoDisplay = styled.div`
 
     #vehicle-img-1 {
       position: absolute;
-      bottom: -54px;
-      right: -258px;
+      bottom: -6vh;
+      left: -29vw;
       transform: scaleX(-1);
-      height: 23vh;
+      width: 48vw;
     }
 
     #vehicle-img-2 {
       position: absolute;
       position: absolute;
-      bottom: -66px;
-      right: -285px;
-      height: 34vh;
+      bottom: -9vh;
+      right: -21vw;
+      width: 52vw;
     }
   }
 `;
@@ -245,26 +250,26 @@ function CarInfoDisplay() {
               <div id='icon-holder'>
                 <img
                   src={mpg}
-                  className='mpg-icon'
+                  className='car-icon'
                   alt='gas-tank'
                 />
                 <span className='desc-car' id='mpg-text'>MPG</span>
               </div>
               <div id='icon-holder'>
                 <img
-                  src={sixty}
-                  className='sixty-icon'
-                  alt='speedometer'
-                />
-                <span className='desc-car' id='sixty-text'>0-60</span>
-              </div>
-              <div id='icon-holder'>
-                <img
                   src={hp}
-                  className='hp-icon'
+                  className='car-icon'
                   alt='graph'
                 />
                 <span className='desc-car' id='hp-text'>HP</span>
+              </div>
+              <div id='icon-holder'>
+                <img
+                  src={sixty}
+                  className='car-icon'
+                  alt='speedometer'
+                />
+                <span className='desc-car' id='sixty-text'>0-60</span>
               </div>
             </div>
 
@@ -298,15 +303,18 @@ function CarInfoDisplay() {
         </Plx>
         <Plx 
           className='title-text'
-          parallaxData={slide2TextPlx}
+          parallaxData={slide2TitlePlx}
         >
           <span>SELECT A VEHICLE</span>
           <span>FROM YOUR PHONE.</span>
-          <div className='desc-text-block'>
+          <Plx 
+            className='desc-text-block'
+            parallaxData={slide2DescPlx}
+          >
             <span>We have three tiers of luxary vehicles to choose from, each with all-inclusive pricing.</span>
             <span>Once you've picked the car you want to Drive from our lineup, all we need is a driver's</span>
             <span>license and an address to deliver the car. No gimmicks. No hidden fees.</span>
-          </div>
+          </Plx>
         </Plx>
       </StyledCarInfoDisplay>
   );

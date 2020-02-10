@@ -51,7 +51,7 @@ export const slideTwoPlx = [
   },
 ];
 
-export const slide2TextPlx = [
+export const slide2TitlePlx = [
   {
     start: '.sticky-trigger-1',
     duration: '20vh',
@@ -59,6 +59,27 @@ export const slide2TextPlx = [
       {
         startValue: 10,
         endValue: 30,
+        unit: 'vh',
+        property: 'translateY',
+      },
+      {
+        startValue: 0,
+        endValue: 1,
+        property: 'opacity',
+      },
+    ],
+  },
+];
+
+export const slide2DescPlx = [
+  {
+    start: '.sticky-trigger-1',
+    startOffset: '10vh',
+    duration: '10vh',
+    properties: [
+      {
+        startValue: 10,
+        endValue: 20,
         unit: 'vh',
         property: 'translateY',
       },
@@ -155,6 +176,48 @@ export const slideThreePlx = [
       {
         startValue: 1,
         endValue: 0,
+        property: 'opacity',
+      },
+    ],
+  },
+];
+
+export const slide3TitlePlx = [
+  {
+    start: '.sticky-trigger-2',
+    startOffset: '10vh',
+    duration: '30vh',
+    properties: [
+      {
+        startValue: 5,
+        endValue: 9,
+        unit: 'vh',
+        property: 'translateY',
+      },
+      {
+        startValue: 0,
+        endValue: 1,
+        property: 'opacity',
+      },
+    ],
+  },
+];
+
+export const slide3DescPlx = [
+  {
+    start: '.sticky-trigger-2',
+    startOffset: '10vh',
+    duration: '10vh',
+    properties: [
+      {
+        startValue: 10,
+        endValue: 18,
+        unit: 'vh',
+        property: 'translateY',
+      },
+      {
+        startValue: 0,
+        endValue: 1,
         property: 'opacity',
       },
     ],
@@ -290,6 +353,62 @@ export const slideFourPlx = [
         startValue: 1,
         endValue: 0,
         property: 'opacity',
+      },
+    ],
+  },
+];
+
+export const slide4TitlePlx = [
+  {
+    start: '.sticky-trigger-3',
+    startOffset: '35vh',
+    duration: '15vh',
+    properties: [
+      {
+        startValue: 0,
+        endValue: 1,
+        property: 'opacity',
+      },
+    ],
+  },
+  {
+    start: '.sticky-trigger-3',
+    startOffset: '35vh',
+    duration: '15vh',
+    properties: [
+      {
+        startValue: 0,
+        endValue: 15,
+        unit: 'vh',
+        property: 'translateY',
+      },
+    ],
+  },
+];
+
+export const slide4DescPlx = [
+  {
+    start: '.sticky-trigger-3',
+    startOffset: '40vh',
+    duration: '15vh',
+    properties: [
+      {
+        startValue: 0,
+        endValue: 1,
+        property: 'opacity',
+      },
+    ],
+  },
+  {
+    start: '.sticky-trigger-3',
+    startOffset: '40vh',
+    duration: '15vh',
+    properties: [
+      {
+        startValue: 10,
+        endValue: 20,
+        unit: 'vh',
+        property: 'translateY',
       },
     ],
   },
@@ -447,6 +566,34 @@ export const slideSixPlx = [
         startValue: 0,
         endValue: 1,
         property: 'opacity',
+      },
+    ],
+  },
+];
+
+export const slide6TitlePlx = [
+  {
+    start: '.sticky-trigger-5',
+    startOffset: '35vh',
+    duration: '15vh',
+    properties: [
+      {
+        startValue: 0,
+        endValue: 1,
+        property: 'opacity',
+      },
+    ],
+  },
+  {
+    start: '.sticky-trigger-5',
+    startOffset: '35vh',
+    duration: '15vh',
+    properties: [
+      {
+        startValue: 0,
+        endValue: 10,
+        unit: 'vh',
+        property: 'translateY',
       },
     ],
   },

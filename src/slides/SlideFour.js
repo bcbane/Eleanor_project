@@ -4,12 +4,40 @@ import Plx from 'react-plx';
 import {
   carColumnPlx,
   slideFourAppPlx,
+  slide4DescPlx,
+  slide4TitlePlx,
 } from '../plxSettings'
 
 const StyledSlideFour = styled.div`
   position: relative;
   height: 100vh;
   width: 100vw;
+
+  .title-text{
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 6vw;
+    position: absolute;
+    width: 42vw;
+    color: #2C3245;
+    line-height: 1;
+    font-family: 'Bebas Neue', Helvetica, Sans-Serif;
+    top: 24vh;
+    right: 3vw;
+  }
+
+  .desc-text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45vw;
+    height: 10vh;
+    font-family: 'Helvetica';
+    font-size: 1vw;
+    position: absolute;
+    top: 2vh;
+  }
   
   .car-column-plx {
     height: 92vh;
@@ -33,7 +61,7 @@ const StyledSlideFour = styled.div`
   }
 
   .slide-four-app-plx {
-    height: 85vh;
+    height: 78vh;
     opacity: 0;
     position: absolute;
     left: 28vw;
@@ -50,6 +78,22 @@ const StyledSlideFour = styled.div`
 function SlideFour() {
   return (
     <StyledSlideFour>
+      <Plx
+        className='title-text'
+        parallaxData={slide4TitlePlx}
+      >
+        <span>DRIVE UNTIL YOU WANT</span>
+        <span>SOMETHING NEW.</span>
+        <Plx
+          className='desc-text-block'
+          parallaxData={slide4DescPlx}
+        >
+          <span>Going on a new date this weekend? The Porsche is a great choice.</span>
+          <span>Heading to the mountains? We recommend the F-150 Raptor.</span>
+          <span>Swap your vehicle as many times as you want, all for the same</span>
+          <span>monthly price.</span>
+        </Plx>
+      </Plx>
       <Plx
         className='car-column-plx'
         parallaxData={carColumnPlx}

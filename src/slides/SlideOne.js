@@ -13,6 +13,7 @@ const StyledSlideOne = styled.div`
     position: absolute;
     left: 5vw;
     top: 20px;
+    width: 20vw;
     z-index: 1; 
   }
 
@@ -26,18 +27,20 @@ const StyledSlideOne = styled.div`
 
     .call-to-action {
       color: #FFF;
-      font-size: 80px;
-      font-family: 'Bebas Neue';
+      font-size: 8vw;
+      line-height: 1.1;
+      font-family: 'Bebas Neue', Helvetica, Sans-Serif;
     }
 
     #arrow-message {
       font-family: Sans-Serif;
-      font-size: 10px;
+      font-size: 1vw;
       color: #414b69;
       margin-left: 10px;
+      margin-top: 2vh;
 
       .forward-arrow {
-        height: 7px;
+        width: 1.5vw;
         margin-left: 5px;
       }
     }
@@ -49,29 +52,29 @@ const StyledSlideOne = styled.div`
     position: relative;
     width: 70vw;
     height: 30vh;
-    bottom: 160px;
+    bottom: 20vh;
 
     #silver-car {
-      width: 45vw;
+      width: 46vw;
       min-width: 300px;
       position: absolute;
       bottom: 0px;
-      left: 61px;
+      left: 7vw;
     }
     #white-car-1 {
-      width: 39vw;
+      width: 47vw;
       min-width: 260px;
       transform: scaleX(-1);
       position: absolute;
-      bottom: 0px;
-      left: -139px;
+      bottom: -2vh;
+      left: -12vw;
     }
     #white-car-2 {
       width: 45vw;
       min-width: 300px;
       position: absolute;
-      bottom: 15px;
-      left: 240px;
+      bottom: 2vh;
+      left: 24vw;
     }
   }
   .image-wrapper {

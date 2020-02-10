@@ -43,7 +43,7 @@ const StyledSlideFive = styled.div`
       }
 
       #info-title {
-        font-family: 'Bebas Neue';
+        font-family: 'Bebas Neue', Helvetica, Sans-Serif;
         font-size: 25px;
         margin: 10px;
       }

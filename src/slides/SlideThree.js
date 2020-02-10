@@ -5,12 +5,41 @@ import {
   appPlx,
   mapPlx,
   slideThreeCarPlx,
+  slide3DescPlx,
+  slide3TitlePlx,
 } from '../plxSettings'
 
 const StyledSlideThree = styled.div`
   position: relative;
   height: 100vh;
   width: 100vw;
+
+  .title-text{
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 6vw;
+    position: absolute;
+    width: 40vw;
+    color: #2C3245;
+    line-height: 1;
+    font-family: 'Bebas Neue', Helvetica, Sans-Serif;
+    top: 17vh;
+    left: 5vw;
+  }
+
+  .desc-text-block {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45vw;
+    height: 9vh;
+    font-family: 'Helvetica';
+    font-size: 1vw;
+    position: absolute;
+    top: 5vh;
+  }
 
   .map-plx {
     opacity: 0;
@@ -52,6 +81,22 @@ const StyledSlideThree = styled.div`
 function SlideThree() {
   return (
     <StyledSlideThree>
+      <Plx
+        className='title-text'
+        parallaxData={slide3TitlePlx}
+      >
+        <span>DELIVERED TO</span>
+        <span>YOUR DOOR.</span>
+        <Plx
+          className='desc-text-block'
+          parallaxData={slide3DescPlx}
+        >
+          <span>Eleanor works with your schedule to have a</span>
+          <span>white-glove delivery service deliver your new</span>
+          <span>vehicle right to your door. Your live vehicle</span>
+          <span>concierge is available to answer questions 24/7.</span>
+        </Plx>
+      </Plx>
       <Plx
         className='map-plx'
         parallaxData={mapPlx}
